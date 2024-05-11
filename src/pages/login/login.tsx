@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
-import './login.css'
+import './loginSignUp.css'
+
 export interface ILoginPageProps {}
 
 const LoginPage: React.FunctionComponent<ILoginPageProps> = () => {
@@ -34,18 +35,17 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = () => {
           const token = await user.getIdToken(); 
           localStorage.setItem('token', token);
           localStorage.setItem('user', JSON.stringify(user));
-          navigate("/");
+          navigate("/react-app/home");
         } catch (error) {
           console.error(error);
         }
       }
-    
+      return (
 
-    return (
-
-        <div>
-            <p>Login page</p>
-            <form onSubmit={handleSubmit} className='login-form'>
+        <div className="overlay">
+            
+            <form onSubmit={handleSubmit} className='login-form'> 
+            <p>Login</p>
         <input
           type="email"
           placeholder="Your Email"
@@ -60,16 +60,14 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className='login-button'>Login</button>
+        <button type="submit" className='login-button'>Login</button> 
+        <p className="center-text">Need to Signup? <Link to="/react-app/signup">Create Account</Link></p>
+        <button className="login-with-google-btn" onClick={() => signInWithGoogle()} disabled={authing}>
+        Sign in with Google
+        </button>
       </form>
-      <p>Need to Signup? <Link to="/react-app/signup">Create Account</Link></p>
-
-            <button className="login-with-google-btn" onClick={() => signInWithGoogle()} disabled={authing}>
-                Sign in with Google
-            </button>
+           
         </div>
     );
-
-
 }
 export default LoginPage;

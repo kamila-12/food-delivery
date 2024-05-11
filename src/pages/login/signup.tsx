@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { getAuth } from 'firebase/auth';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
-
+import './loginSignUp.css'
 
 const Signup = () => {
 
@@ -28,9 +28,10 @@ const Signup = () => {
     }
   
     return (
-      <div>
-        <h1>Signup Page</h1>
+      <div className="overlay">
+       
         <form onSubmit={handleSubmit} className='signup-form'>
+        <p>Signup Page</p>
           <input
             type="email"
             placeholder="Your Email"
@@ -46,8 +47,9 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" className='signup-button'>Signup</button>
+          <p>Need to Login? <Link to="/react-app/login">Login</Link></p>
         </form>
-        <p>Need to Login? <Link to="/login">Login</Link></p>
+        
       </div>
     )
   }
@@ -55,42 +57,3 @@ const Signup = () => {
   export default Signup
 
 
-// const [email, setEmail] = useState('')
-// const [password1, setPassword1] = useState('')
-
-
-
-
-// import { useHistory } from 'react-router-dom';
-// import React, { useState } from 'react';
-// import IPageProps from '../../interfaces/page';
-// import { auth } from '../../config/firebase';
-
-// const RegisterPage: React.FunctionComponent<IPageProps> = props => {
-
-//     const [authenticating, setAuthenticating] = useState<boolean>(false);
-//     const [email, setEmail] = useState<string>('');
-//     const [password, setPassword] = useState<string>('');
-//     const [error, setError] = useState<string>('');
-
-//     const history = useHistory();
-//     const signInWithEmailAndPassword = () => {
-//         if (password !== confirm) setError('Please make sure your password matchv ')
-//         if (error !== '') setError('');
-//         setRegistering(true);
-
-//         auth.createUserWithEmailAndPassword(email, password)
-//         .then(result => {
-            
-//         })
-//         .catch(error => {
-            
-//         });
-//     }
-
-//     return (
-//         <p>Register page.</p>
-//     );
-// }
-
-// export default RegisterPage;
