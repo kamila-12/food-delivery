@@ -10,24 +10,23 @@ const AuthRoute: React.FunctionComponent<IAuthRouteProps> = (props) => {
     const { children } = props;
     const auth = getAuth();
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true); // Устанавливаем loading в true в начале
 
     useEffect(() => {
-        const AuthCheck = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setLoading(false);
-            } else {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setLoading(false); // Устанавливаем loading в false после завершения проверки авторизации
+            if (!user) {
                 console.log('unauthorized');
-                navigate('/login');
+                // navigate('/login'); // Перенаправляем только если пользователь неавторизован
             }
         });
 
-        return () => AuthCheck();
-    }, [auth]);
+        return () => unsubscribe(); // Отменяем подписку при размонтировании компонента
+    }, [auth, navigate]);
 
-    if (loading) return <p>loading ...</p>;
+    if (loading) return <p>loading ...</p>; // Отображаем загрузочное сообщение пока идет проверка авторизации
 
-    return <>{children}</>;
+    return <>{children}</>; // Рендерим дочерние компоненты, если загрузка завершена
 };
 
 export default AuthRoute;
