@@ -4,7 +4,8 @@
     gap: 20px;
 }
 .explore-menu h1 {
-    color:blue;
+    font-family: "Alumni Sans", sans-serif;
+    color:rgb(33, 33, 34);
 }
 .explore-menu-text {
     max-width: 60%;
@@ -12,24 +13,30 @@
 }
 .explore-menu-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    align-items: center; 
+    justify-content: center;
     text-align: center;
     margin: 20px;
-    
 }
+
+.explore-menu-list-item {
+    
+    margin-right: 120px; 
+}
+
+
 .explore-menu-list-item img {
     width: 7.5vw;
     min-width: 80px;
     cursor: pointer;
-    border-radius: 5%;
+    border-radius: 2%;
     
 }
 .explore-menu-list-item p {
 
     margin-top: 10px;
     color: rgb(25, 25, 31);
-    font-size: 14px;
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 24px;
     cursor: pointer;
 }
