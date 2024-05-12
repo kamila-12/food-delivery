@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth, signOut } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
-
+// import foodDisplay from '../../components/foodDisplay/foodDisplay';
 export interface IHomePageProps {}
+import ExploreMenu from '../../components/exploreMenu/exploreMenu';
 
 const HomePage: React.FunctionComponent<IHomePageProps> = () => {
     const [user, setUser] = useState<any>(null); // Устанавливаем тип any для переменной пользователя
@@ -25,6 +26,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
           console.error(error);
         }
     }
+    const [category, setCategory] = useState("All");
 
     return (
         <div>
@@ -42,6 +44,8 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
                 </div>
             )}
             <Link to="/react-app/login">Login</Link>
+          {/* <foodDisplay category={category} />   */}
+          <ExploreMenu category={category} setCategory={setCategory}/>
         </div> 
     );
 };
