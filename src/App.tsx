@@ -8,6 +8,7 @@ import { config } from './config/config';
 import AuthRoute from './components/AuthRoutes';
 import './App.css'
 import StoreContextProvider from './context/StoreContext.tsx';
+import Navbar from './components/navbar/navbar'
 
 initializeApp(config.firebaseConfig);
 
@@ -18,6 +19,7 @@ const App: React.FunctionComponent<IApplicationProps> = () => {
       
             <BrowserRouter>
              <StoreContextProvider> 
+             <Navbar/>
                 <Routes>
                     <Route
                         index

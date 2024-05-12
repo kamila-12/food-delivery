@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth, signOut } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
-
-export interface IHomePageProps {}
+import { useNavigate } from 'react-router-dom';
 import ExploreMenu from '../../components/exploreMenu/exploreMenu';
 import FoodDisplay from '../../components/foodDisplay/foodDisplay'
+export interface IHomePageProps {}
+
 
 const HomePage: React.FunctionComponent<IHomePageProps> = () => {
     const [user, setUser] = useState<any>(null); // Устанавливаем тип any для переменной пользователя
@@ -31,7 +31,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
 
     return (
         <div>
-            <p>Home Page (Protected by Firebase!)</p>
+            
             
             {user ? (
                 <div>
@@ -44,7 +44,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
                     
                 </div>
             )}
-            <Link to="/react-app/login">Login</Link>
+            
           
           <ExploreMenu category={category} setCategory={setCategory}/>
           <FoodDisplay category={category} />

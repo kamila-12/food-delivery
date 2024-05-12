@@ -6,10 +6,10 @@
 //     description: string;
 //     category: string
 // }
-// import basket_icon from './basket_icon.png';
-// import logo from './logo.png';
+import basket_icon from './basket_icon.png';
+import logo from './logo.png';
 // import header_img from './header_img.png';
-// import search_icon from './search_icon.png';
+import search_icon from './search_icon.png';
 import menu_1 from './menu_1.png';
 import menu_2 from './menu_2.png';
 import menu_3 from './ink.png';
@@ -51,10 +51,10 @@ import logout_icon from './logout_icon.png';
 import parcel_icon from './parcel_icon.png';
 
 export const assets = {
-    // logo,
-    // basket_icon,
+    logo,
+    basket_icon,
     // header_img,
-    // search_icon,
+    search_icon,
     rating_starts,
     add_icon_green,
     add_icon_white,
@@ -75,7 +75,7 @@ export const assets = {
 // import cupcake_1 from './ink.png'
 
 // import cake_1 from './food_7.png'
-import drink_1 from './drink_1.png'
+// import drink_1 from './drink_1.png'
 export const menu_list: { menu_name: string; menu_image: string }[] = [
     {
         menu_name: "Drinks",
