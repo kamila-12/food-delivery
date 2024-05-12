@@ -11,6 +11,7 @@ import StoreContextProvider from './context/StoreContext.tsx';
 import Navbar from './components/navbar/navbar'
 import Footer from './components/Footer/Footer'
 import Cart from './pages/Cart/Cart'
+import PlaceOrder from './pages/order/order'
 
 initializeApp(config.firebaseConfig);
 
@@ -35,6 +36,7 @@ const App: React.FunctionComponent<IApplicationProps> = () => {
                     <Route path="/react-app/login" element={<LoginPage />} />
                     <Route path="/react-app/signup" element={<Signup />} />
                     <Route path="/react-app/cart" element={<Cart />} />
+                    <Route path="/react-app/order" element={<PlaceOrder />} />
                 </Routes>
                 <Footer />
                 </StoreContextProvider> 

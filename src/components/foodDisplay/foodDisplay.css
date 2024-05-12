@@ -1,10 +1,14 @@
 .food-display {
+    margin-left: 30px;
     margin-top: 30px;
 
 }
 .food-display h2 {
-    font-size: 30px;
+    font-family: 'Alumni Sans','Crushed','Inter';
+    color: rgb(242, 243, 245);
+    font-size: 32px;
     font-weight: 600;
+    margin-left: 18px;
 }
 .food-display-list {
     display: grid;
