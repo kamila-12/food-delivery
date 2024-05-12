@@ -7,7 +7,7 @@ export interface IHomePageProps {}
 
 
 const HomePage: React.FunctionComponent<IHomePageProps> = () => {
-    const [user, setUser] = useState<any>(null); // Устанавливаем тип any для переменной пользователя
+    const [user, setUser] = useState<any>(null); 
     const navigate = useNavigate();
     const auth = getAuth();
 

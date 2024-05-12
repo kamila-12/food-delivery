@@ -12,7 +12,10 @@ const ExploreMenu: React.FC<IExploreMenuProps> = ({category, setCategory}) => {
     return (
         <div className='explore-menu' id='explore-menu'>
             <h1>Explore menu</h1>
-            <p className='explore-menu-text'>cjldkhslhrgshirgshleghslehglasegihsa;eigh;aseigba</p>
+            <p className='explore-menu-text'>
+            The Art dessert workshop is a modern complex where masterpieces of confectionery art are created: author's cakes, handmade sweets, unique desserts according to the original recipe. 
+            Here dreams of a sweet life become a reality!
+            </p>
             <div className="explore-menu-list" style={{display: 'flex'}}>
                 {menu_list.map((item, index) => {
                     return (

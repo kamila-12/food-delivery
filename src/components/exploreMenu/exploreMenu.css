@@ -5,9 +5,15 @@
 }
 .explore-menu h1 {
     font-family: "Alumni Sans", sans-serif;
-    color:rgb(33, 33, 34);
+    margin-left: 56px;
+    margin-top: 32px;
+    color:rgb(228, 228, 236);
 }
 .explore-menu-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 18px;
+    margin-left: 56px;
+    color:rgb(238, 238, 243);
     max-width: 60%;
     columns: #808080;
 }
