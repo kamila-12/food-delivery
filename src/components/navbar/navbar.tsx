@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link to="/react-app/login">
           <button className="signin-button">sign in</button>
         </Link>
-        {/* <button>sign in</button> */}
+
       </div>
     </div>
   );
