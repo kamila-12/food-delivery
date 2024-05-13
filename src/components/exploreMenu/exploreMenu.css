@@ -1,0 +1,48 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.explore-menu h1 {
+    font-family: "Alumni Sans", sans-serif;
+    margin-left: 56px;
+    margin-top: 32px;
+    color:rgb(228, 228, 236);
+}
+.explore-menu-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 18px;
+    margin-left: 56px;
+    color:rgb(238, 238, 243);
+    max-width: 60%;
+    columns: #808080;
+}
+.explore-menu-list {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.explore-menu-list-item {
+    
+    margin-right: 120px; 
+}
+
+
+.explore-menu-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 2%;
+    
+}
+.explore-menu-list-item p {
+
+    margin-top: 10px;
+    color: rgb(25, 25, 31);
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+}

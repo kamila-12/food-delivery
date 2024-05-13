@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth, signOut } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
+import ExploreMenu from '../../components/exploreMenu/exploreMenu';
+import FoodDisplay from '../../components/foodDisplay/foodDisplay'
 export interface IHomePageProps {}
+import './home.css'
+
 
 const HomePage: React.FunctionComponent<IHomePageProps> = () => {
-    const [user, setUser] = useState<any>(null); // Устанавливаем тип any для переменной пользователя
+    const [user, setUser] = useState<any>(null); 
     const navigate = useNavigate();
     const auth = getAuth();
 
@@ -25,13 +28,14 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
           console.error(error);
         }
     }
+    const [category, setCategory] = useState("All");
 
     return (
         <div>
-            <p>Home Page (Protected by Firebase!)</p>
-            <h1>Welcome to React Firebase Auth using email and password</h1>
+            
+            
             {user ? (
-                <div>
+                <div className='button-logout'>
                     <h2>{user.email}</h2>
                     <button onClick={handleLogout}>Logout</button>
                 </div>
@@ -41,7 +45,10 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
                     
                 </div>
             )}
-            <Link to="/react-app/login">Login</Link>
+            
+          
+          <ExploreMenu category={category} setCategory={setCategory}/>
+          <FoodDisplay category={category} />
         </div> 
     );
 };

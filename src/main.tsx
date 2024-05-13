@@ -2,9 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+import StoreContextProvider from './context/StoreContext';
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+
+  // <React.StrictMode>
+  <StoreContextProvider> 
     <App />
-  </React.StrictMode>,
+    </StoreContextProvider> 
+
 )

@@ -21,7 +21,7 @@ const Signup = () => {
         const token = await user.getIdToken(); 
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(user));
-        navigate("/");
+        navigate("/react-app/home");
       } catch (error) {
         console.error(error);
       }

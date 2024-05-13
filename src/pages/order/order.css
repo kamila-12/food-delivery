@@ -1,0 +1,57 @@
+.place-order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+}
+.place-order-left {
+    margin-left: 56px;
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+.place-order-left .title {
+    font-size: 34px;
+    font-family: 'Alumni Sans','Crushed','Inter';
+    color: rgb(242, 243, 245);
+    font-weight: 70px;
+    margin-bottom: 50px;
+
+}
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: rgb(206, 79, 157);
+    font-family: 'Alumni Sans','Crushed','Inter';
+    font-size: 18px;
+}
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+
+}
+.cart-total h2 {
+    font-size: 26px;
+    font-family: 'Alumni Sans','Crushed','Inter';
+}
+.cart-total-details {
+    font-size: 20px;
+    font-family: 'Alumni Sans','Crushed','Inter';
+}
+
+.place-order-right {
+    background-color: rgb(207, 207, 211);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    margin-right: 56px;
+    max-width: max(40%, 500px);
+}
+.place-order .cart-total button {
+    margin-top: 30px;
+    
+
+}
