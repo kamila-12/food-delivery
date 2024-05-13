@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import ExploreMenu from '../../components/exploreMenu/exploreMenu';
 import FoodDisplay from '../../components/foodDisplay/foodDisplay'
 export interface IHomePageProps {}
+import './home.css'
 
 
 const HomePage: React.FunctionComponent<IHomePageProps> = () => {
@@ -34,7 +35,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
             
             
             {user ? (
-                <div>
+                <div className='button-logout'>
                     <h2>{user.email}</h2>
                     <button onClick={handleLogout}>Logout</button>
                 </div>
